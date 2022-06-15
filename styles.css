@@ -8,6 +8,10 @@ h1, h2 {
   color: #06283D;
 }
 
+#main_header {
+  background: #47B5FF;
+}
+
 a {
   color: #1363DF;
   text-decoration: none;
