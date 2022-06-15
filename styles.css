@@ -1,0 +1,19 @@
+body {
+  background: #47B5FF;
+}
+
+h1, h2 {
+  color: #06283D;
+}
+
+a {
+  color: #1363DF;
+}
+
+a:hover {
+  color: #DFF6FF;
+}
+
+footer {
+  text-align: center;
+}
