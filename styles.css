@@ -15,6 +15,11 @@ a:hover {
   color: #DFF6FF;
 }
 
+hr {
+  border: 0;
+  border-top: 1px dotted #000;
+}
+
 footer {
   text-align: center;
 }
