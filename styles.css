@@ -1,5 +1,5 @@
 body {
-  background: #47B5FF;
+  background: #DFF6FF;
   font-family: "Helvetica", "Arial", "Bitstream Vera Sans", "Verdana", sans-serif;
   font-size: 13px;
 }
@@ -14,7 +14,7 @@ a {
 }
 
 a:hover {
-  color: #DFF6FF;
+  color: #47B5FF;
 }
 
 hr {
