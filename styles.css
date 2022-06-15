@@ -12,7 +12,7 @@ h1, h2 {
   background: #47B5FF;
   padding: 10px;
   margin: -8px -8px 0;
-  border: 20px solid #1363DF;
+  border-bottom: 20px solid #1363DF;
 }
 
 a {
