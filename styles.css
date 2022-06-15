@@ -1,5 +1,6 @@
 body {
   background: #47B5FF;
+  font-family: "Helvetica", "Arial", "Bitstream Vera Sans", "Verdana", sans-serif;
 }
 
 h1, h2 {
@@ -17,7 +18,7 @@ a:hover {
 
 hr {
   border: 0;
-  border-top: 1px dotted #000;
+  border-top: 1px dashed #000;
 }
 
 footer {
