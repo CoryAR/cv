@@ -40,33 +40,28 @@
       &raquo; <a href="index.html">Back Home</a> <br>
       &copy; Copyright Cory Roberts, 2022
     </footer>
-  <script>
-    let add_to_do = document.querySelector('#add-to-do');
-    
-    add_to_do.onclick = function () {
-      let to_do_prompt = prompt('Name of Your To-Do:');
-      let to_do_div = document.createElement('div');
-      to_do_div.className = 'to-do-div';
-      let to_do_len = document.querySelectorAll('div.to-do-div').length;
-      
-      if (to_do_len === 0) {
+<script>
+let add_to_do = document.querySelector('#add-to-do');
+
+add_to_do.onclick = function() {
+    let to_do_prompt = prompt('Name of Your To-Do:');
+    let to_do_div = document.createElement('div');
+    to_do_div.className = 'to-do-div';
+    let to_do_len = document.querySelectorAll('div.to-do-div').length;
+
+    if (to_do_len === 0) {
         to_do_div.innerHTML = '<input type="checkbox" class="to-do" id="to-do-1" style="vertical-align: middle"> <label for="to-do-1">' + to_do_prompt + '</label>';
-      } else  {
+    } else {
         to_do_div.innerHTML = '<input type="checkbox" class="to-do" id="to-do-' + to_do_len + '" style="vertical-align: middle"> <label for="to-do-' + to_do_len + '">' + to_do_prompt + '</label>';
-      }
-      
-      document.querySelector('#to-do-list').appendChild(to_do_div);
-    };
-    
-    let to_do = document.querySelectorAll('input.to-do');
-    
-    to_do.onclick = function () {
-        localStorage.setItem('to-do-list',  document.querySelector('#to-do-list').innerHTML);
-    };
-    
-    if (localStorage.getItem('to-do-list').length) {
-      document.querySelector('#to-do-list').innerHTML = localStorage.getItem('to-do-list');
     }
-  </script>
+
+    document.querySelector('#to-do-list').appendChild(to_do_div);
+    localStorage.setItem('to-do-list', document.querySelector('#to-do-list').innerHTML);
+};
+
+if (localStorage.getItem('to-do-list').length) {
+    document.querySelector('#to-do-list').innerHTML = localStorage.getItem('to-do-list');
+}
+</script>
   </body>
 </html>
