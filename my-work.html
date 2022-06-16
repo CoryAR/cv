@@ -65,12 +65,12 @@ if (localStorage.getItem('to-do-list').length) {
   
   for (let i = 0; i < to_do.length; i++) {
     to_do[i].onclick = function() {
-      localStorage.setItem('to-do-' + to_do[i].innerText, true);
+      localStorage.setItem('to-do-' + to_do[i].innerText, to_do[i].innerText);
     };
   }
   
    for (let i = 0; i < to_do.length; i++) {
-     if (localStorage.getItem('to-do-' + to_do[i].innerText) === 'true') {
+     if (localStorage.getItem('to-do-' + to_do[i].innerText) === to_do[i].innerText) {
        to_do[i].checked = true;
      }
    }
