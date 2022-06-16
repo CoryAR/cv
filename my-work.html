@@ -66,7 +66,12 @@ if (localStorage.getItem('to-do-list') !== null) {
   for (let i = 0; i < remove_to_do.length; i++) {
  remove_to_do[i].onclick = function() {
    this.parentNode.remove();
+localStorage.setItem('remove-to-do-' + this.previousSibling.innerText.trim(), true);
  };
+    
+    if (localStorage.getItem('remove-to-do-' + this.previousSibling.innerText.trim()) === 'true') {
+      this.previousSibling.remove();
+    }
   }
   
 let to_do = document.querySelectorAll('label');
@@ -79,9 +84,7 @@ for (let i = 0; i < to_do.length; i++) {
             localStorage.removeItem('to-do-' + to_do[i].innerText.trim());
         }
     };
-}
 
-for (let i = 0; i < to_do.length; i++) {
     if (localStorage.getItem('to-do-' + to_do[i].innerText.trim()) !== null || undefined && localStorage.getItem('to-do-' + to_do[i].innerText.trim()) === to_do[i].innerText.trim()) {
         to_do[i].children[0].checked = true;
     }
