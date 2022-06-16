@@ -62,11 +62,13 @@ if (localStorage.getItem('to-do-list') !== null) {
 }
   
   let remove_to_do = document.querySelectorAll('a.remove-to-do');
-  
- remove_to_do.onclick = function() {
+ 
+  for (let i = 0; i < remove_to_do.length; i++) {
+ remove_to_do[i].onclick = function() {
    this.parentNode.remove();
     localStorage.setItem('to-do-list-after-removal', document.querySelector('#to-do-list #contents').innerHTML);
  };
+  }
   
   if (localStorage.getItem('to-do-list-after-removal') !== null) {
     document.querySelector('#to-do-list #contents').innerHTML = localStorage.getItem('to-do-list-after-removal');
