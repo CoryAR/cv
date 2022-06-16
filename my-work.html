@@ -60,6 +60,20 @@ add_to_do.onclick = function() {
 if (localStorage.getItem('to-do-list').length) {
     document.querySelector('#to-do-list #contents').innerHTML = localStorage.getItem('to-do-list');
 }
+
+  let to_do = document.querySelectorAll('input.to-do');
+  
+  for (let i = 0; i < to_do.length; i++) {
+    to_do[i].onclick = function() {
+      localStorage.setItem('to-do-' + to_do[i].innerText, true);
+    };
+  }
+  
+   for (let i = 0; i < to_do.length; i++) {
+     if (localStorage.setItem('to-do-' + to_do[i].innerText) === 'true') {
+       to_do[i].checked = true;
+     }
+   }
 </script>
   </body>
 </html>
