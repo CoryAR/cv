@@ -61,20 +61,11 @@
     let to_do = document.querySelectorAll('input.to-do');
     
     to_do.onclick = function () {
-      if (to_do + this.id === document.querySelectorAll('to-do-' + this.id).checked) {
-        localStorage.setItem('to-do' + this.id, this.id);
-    }
+        localStorage.setItem('to-do-list',  document.querySelector('#to-do-list').innerHTML);
     };
     
-    let to_do_array = [];
-
-      for (const i in localStorage) {
-      if (localStorage.key(i).indexOf('to-do-') !== -1) {
-        to_do_array.push(localStorage.key(i));
-             let to_check = document.querySelector('#' + localStorage.getItem(localStorage.key(i)));
-        to_check.checked = true;
-      }
-      
+    if (localStorage.getItem('to-do-list').length) {
+      document.querySelector('#to-do-list').innerHTML = localStorage.getItem('to-do-list');
     }
   </script>
   </body>
