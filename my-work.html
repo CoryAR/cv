@@ -51,7 +51,7 @@ add_to_do.onclick = function() {
         let to_do_div = document.createElement('div');
         to_do_div.className = 'to-do-div';
         let to_do = document.querySelectorAll('div.to-do-div');
-        to_do_div.innerHTML = '<label><input type="checkbox" class="to-do" style="vertical-align: middle"> ' + to_do_prompt + '</label>';
+        to_do_div.innerHTML = '<label><input type="checkbox" class="to-do" style="vertical-align: middle"> ' + to_do_prompt + '</label> (<a href="javascript: void(0)" class="remove-to-do">Remove Item</a>)';
         document.querySelector('#to-do-list #contents').appendChild(to_do_div);
         localStorage.setItem('to-do-list', document.querySelector('#to-do-list #contents').innerHTML);
     }
@@ -60,7 +60,19 @@ add_to_do.onclick = function() {
 if (localStorage.getItem('to-do-list').length) {
     document.querySelector('#to-do-list #contents').innerHTML = localStorage.getItem('to-do-list');
 }
-
+  
+  let remove_to_do = document.querySelectorAll('a.remove-to-do');
+  
+ remove_to_do.onclick = function() {
+   this.remove();
+  this.previousSibling.remove();
+    localStorage.setItem('to-do-list-after-removal', document.querySelector('#to-do-list #contents').innerHTML);
+ };
+  
+  if (localStorage.getItem('to-do-list-after-removal').length) {
+    document.querySelector('#to-do-list #contents').innerHTML = localStorage.getItem('to-do-list-after-removal');
+}
+  
 let to_do = document.querySelectorAll('label');
 
 for (let i = 0; i < to_do.length; i++) {
@@ -78,6 +90,6 @@ for (let i = 0; i < to_do.length; i++) {
         to_do[i].children[0].checked = true;
     }
 }
-</script>
+  </script>
   </body>
 </html>
