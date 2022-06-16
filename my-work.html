@@ -51,7 +51,7 @@ add_to_do.onclick = function() {
     let to_do_div = document.createElement('div');
     to_do_div.className = 'to-do-div';
     let to_do = document.querySelectorAll('div.to-do-div');
-    to_do_div.innerHTML = '<label><input type="checkbox" class="to-do" dtyle="vertical-align: middle"> ' + to_do_prompt + '</label>';
+    to_do_div.innerHTML = '<label><input type="checkbox" class="to-do" style="vertical-align: middle"> ' + to_do_prompt + '</label>';
     document.querySelector('#to-do-list #contents').appendChild(to_do_div);
     localStorage.setItem('to-do-list', document.querySelector('#to-do-list #contents').innerHTML);
   }
@@ -60,24 +60,6 @@ add_to_do.onclick = function() {
 if (localStorage.getItem('to-do-list').length) {
     document.querySelector('#to-do-list #contents').innerHTML = localStorage.getItem('to-do-list');
 }
-  
-  let to_do_click = document.querySelectorAll('input.to-do');
-  
-for (let i = 0; i < to_do_click.length; i++) {
-  to_do_click[i].onclick = function() {
-    localStorage.setItem(this.id, true);
-  };
-  }
-  
-        var array = [];
-
-        for (var i = 0; i < localStorage.length; i++) {
-            if (localStorage.key(i).indexOf(/to-do-[0-9]+/i) !== -1) {
-                array.push(localStorage.key(i));
-              console.log(array);
-                localStorage.getItem(localStorage.key(i)).checked = true;
-            }
-        }
 </script>
   </body>
 </html>
