@@ -61,7 +61,9 @@
     let to_do = document.querySelectorAll('input.to-do');
     
     to_do.onclick = function () {
+      if (to_do + this.id === document.querySelectorAll('to-do-' + this.id).checked) {
         localStorage.setItem('to-do' + this.id, this.id);
+    }
     };
     
     let to_do_array = [];
