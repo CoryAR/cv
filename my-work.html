@@ -58,7 +58,7 @@ add_to_do.onclick = function() {
         to_do_div.innerHTML = '<input type="checkbox" class="to-do" id="to-do-' + to_do_len + '" style="vertical-align: middle"> <label for="to-do-' + to_do_len + '">' + to_do_prompt + '</label>';
     }
 
-    document.querySelectorAll('#to-do-list #contents').appendChild(to_do_div);
+    document.querySelector('#to-do-list #contents').appendChild(to_do_div);
     localStorage.setItem('to-do-list', document.querySelector('#to-do-list #contents').innerHTML);
   }
 };
