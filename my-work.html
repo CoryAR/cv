@@ -66,11 +66,13 @@ if (localStorage.getItem('to-do-list').length) {
   for (let i = 0; i < to_do.length; i++) {
     to_do[i].onclick = function() {
       localStorage.setItem('to-do-' + to_do[i].innerText.trim(), to_do[i].innerText.trim());
+      console.log(to_do[i].innerText.trim());
     };
   }
   
-   for (let i = 0; i < to_do.length; i++) {
+   for (let i = 0; i < to_do.length; i++) { 
      if (localStorage.getItem('to-do-' + to_do[i].innerText.trim()) === to_do[i].innerText.trim()) {
+             console.log(to_do[i].innerText.trim());
        to_do[i].checked = true;
      }
    }
