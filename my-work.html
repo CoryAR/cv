@@ -74,6 +74,7 @@ if (localStorage.getItem('to-do-list').length) {
   };
   
   for (const i in to_do_click) {
+    console.log(i);
     if (localStorage.getItem('to-do-' + i) === 'true') {
     document.querySelector('#to-do-' + i).checked = true;
     }
