@@ -64,8 +64,7 @@ if (localStorage.getItem('to-do-list') !== null) {
   let remove_to_do = document.querySelectorAll('a.remove-to-do');
   
  remove_to_do.onclick = function() {
-   this.remove();
-  this.previousSibling.remove();
+   this.parentNode.remove();
     localStorage.setItem('to-do-list-after-removal', document.querySelector('#to-do-list #contents').innerHTML);
  };
   
