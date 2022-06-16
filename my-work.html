@@ -69,8 +69,8 @@ if (localStorage.getItem('to-do-list') !== null) {
 localStorage.setItem('remove-to-do-' + this.previousSibling.innerText.trim(), true);
  };
     
-    if (localStorage.getItem('remove-to-do-' + this.previousSibling.innerText.trim()) === 'true') {
-      this.previousSibling.remove();
+    if (localStorage.getItem('remove-to-do-' + remove_to_do[i].previousSibling.innerText.trim()) === 'true') {
+      remove_to_do[i].previousSibling.remove();
     }
   }
   
