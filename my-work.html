@@ -61,9 +61,9 @@ if (localStorage.getItem('to-do-list').length) {
     document.querySelector('#to-do-list #contents').innerHTML = localStorage.getItem('to-do-list');
 }
 
-  let to_do = document.querySelectorAll('label');
+  var to_do = document.querySelectorAll('label');
   
-  for (let i = 0; i < to_do.length; i++) {
+  for (var i = 0; i < to_do.length; i++) {
     to_do[i].onclick = function() {
       localStorage.setItem('to-do-' + to_do[i].innerText, to_do[i].innerText);
     };
