@@ -51,7 +51,6 @@ add_to_do.onclick = function() {
     let to_do_div = document.createElement('div');
     to_do_div.className = 'to-do-div';
     let to_do_len = document.querySelectorAll('div.to-do-div').length;
-  }
   
     if (to_do_len === 0) {
         to_do_div.innerHTML = '<input type="checkbox" class="to-do" id="to-do-1" style="vertical-align: middle"> <label for="to-do-1">' + to_do_prompt + '</label>';
@@ -61,6 +60,7 @@ add_to_do.onclick = function() {
 
     document.querySelectorAll('#to-do-list #contents').appendChild(to_do_div);
     localStorage.setItem('to-do-list', document.querySelector('#to-do-list #contents').innerHTML);
+  }
 };
 
 if (localStorage.getItem('to-do-list').length) {
