@@ -57,7 +57,7 @@ add_to_do.onclick = function() {
     }
 };
 
-if (localStorage.getItem('to-do-list').length) {
+if (localStorage.getItem('to-do-list') !== null) {
     document.querySelector('#to-do-list #contents').innerHTML = localStorage.getItem('to-do-list');
 }
   
@@ -69,7 +69,7 @@ if (localStorage.getItem('to-do-list').length) {
     localStorage.setItem('to-do-list-after-removal', document.querySelector('#to-do-list #contents').innerHTML);
  };
   
-  if (localStorage.getItem('to-do-list-after-removal').length) {
+  if (localStorage.getItem('to-do-list-after-removal') !== null) {
     document.querySelector('#to-do-list #contents').innerHTML = localStorage.getItem('to-do-list-after-removal');
 }
   
