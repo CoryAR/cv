@@ -70,13 +70,14 @@ if (localStorage.getItem('to-do-list').length) {
   let to_do_click = document.querySelectorAll('input.to-do');
   
   to_do_click.onclick = function() {
-    localStorage.setItem('to-do-' + this.id, true);
+    localStorage.setItem('#' + this.id, true);
   };
   
-  for (const i in to_do_click) {
-    let index = document.querySelectorAll('input.to-do')[i].id;
-  if (localStorage.getItem('to-do-' + index) === 'true') {
-    document.querySelector('#to-do-' + index).checked = true;
+  let to_do_div_len = document.querySelectorAll('div.to-do-div').length;
+  
+  for (const i in to_do_div_len) {
+  if (localStorage.getItem('to-do-' + i) === 'true') {
+    document.querySelector('#to-do-' + i).checked = true;
   }
 }
 </script>
