@@ -65,7 +65,7 @@ let to_do = document.querySelectorAll('label');
 
 for (let i = 0; i < to_do.length; i++) {
     to_do[i].onclick = function() {
-        if (this.checked === true) {
+        if (this.children[0].checked === true) {
             localStorage.setItem('to-do-' + to_do[i].innerText.trim(), to_do[i].innerText.trim());
         } else {
             localStorage.removeItem('to-do-' + to_do[i].innerText.trim());
