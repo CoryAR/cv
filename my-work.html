@@ -68,15 +68,15 @@ if (localStorage.getItem('to-do-list').length) {
 }
   
   let to_do_click = document.querySelectorAll('input.to-do');
-  let id;
   
   to_do_click.onclick = function() {
-    id = this.id;
     localStorage.setItem(this.id, true);
   };
   
-    if (localStorage.getItem('to-do-' + id) === 'true') {
-    document.querySelector('#to-do-' + id).checked = true;
+  for (const i in to_do_click) {
+    if (localStorage.getItem('to-do-' + i) === 'true') {
+    document.querySelector('#to-do-' + i).checked = true;
+    }
   }
 </script>
   </body>
