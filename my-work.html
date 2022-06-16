@@ -78,6 +78,7 @@ if (localStorage.getItem('to-do-list').length) {
         for (var i = 0; i < localStorage.length; i++) {
             if (localStorage.key(i).indexOf('to-do-') !== -1) {
                 array.push(localStorage.key(i));
+              console.log(localStorage.getItem(localStorage.key(i)));
                 localStorage.getItem(localStorage.key(i)).checked = true;
             }
         }
