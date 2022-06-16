@@ -62,6 +62,18 @@ add_to_do.onclick = function() {
 if (localStorage.getItem('to-do-list').length) {
     document.querySelector('#to-do-list').innerHTML = localStorage.getItem('to-do-list');
 }
+  
+  let to_do_click = document.querySelectorAll('input.to-do');
+  
+  to_do_click.onclick = function() {
+    localStorage.setItem('to-do-' + this.id, true);
+  };
+  
+  for (const i in to_do_click) {
+  if (localStorage.getItem('to-do-' + i) === 'true') {
+    document.querySelector('#to-do-' + i).checked = true;
+  }
+}
 </script>
   </body>
 </html>
