@@ -52,8 +52,7 @@
       if (to_do_len === 0) {
         to_do_div.innerHTML = '<input type="checkbox" class="to-do" id="to-do-1" style="vertical-align: middle"> <label for="to-do-1">' + to_do_prompt + '</label>';
       } else  {
-        let new_to_do_len = parseInt(to_do_len + 1, 10);
-        to_do_div.innerHTML = '<input type="checkbox" class="to-do" id="to-do-' + new_to_do_len + '" style="vertical-align: middle"> <label for="to-do-' + new_to_do_len + '">' + to_do_prompt + '</label>';
+        to_do_div.innerHTML = '<input type="checkbox" class="to-do" id="to-do-' + to_do_len + '" style="vertical-align: middle"> <label for="to-do-' + to_do_len + '">' + to_do_prompt + '</label>';
       }
       
       document.querySelector('#to-do-list').appendChild(to_do_div);
@@ -62,11 +61,18 @@
     let to_do = document.querySelectorAll('input.to-do');
     
     to_do.onclick = function () {
-      localStorage.setItem('to-do', this.id);
+        localStorage.setItem('to-do' + this.id, this.id);
     };
     
-    if (localStorage.getItem('to-do').length) {
-      document.querySelector('#to-do-' + localStorage.getItem('to-do')).checked;
+    let to_do_array = [];
+
+      for (const i in localStorage) {
+      if (localStorage.key(i).indexOf('to-do-') !== -1) {
+        to_do_array.push(localStorage.key(i));
+             let to_check = document.querySelector('#' + localStorage.getItem(localStorage.key(i)));
+        to_check.checked = true;
+      }
+      
     }
   </script>
   </body>
