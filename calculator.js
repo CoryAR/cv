@@ -7,7 +7,7 @@ for (let i in button) {
         } else if (this.innerText.indexOf('<') !== -1) {
           document.querySelector('#results').charAt(0).innerText = '';
         } else if (this.innerText.indexOf('=') === -1) {
-          document.querySelector('#results').innerText += button[i].innerHTML;
+          document.querySelector('#results').innerText += button[i].innerText;
         }
   };
 }
