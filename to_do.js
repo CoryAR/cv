@@ -21,7 +21,7 @@ if (localStorage.getItem('to-do-list') !== null) {
     let to_do_div = document.querySelectorAll('div.to-do-div');
     
     for (let i = 0; i < to_do_div.length; i++) {
-        if (to_do_div[i].innerText.trim() === '') {
+        if (to_do_div[i].innerText.trim() === '(Remove Item)') {
             to_do_div[i].remove();
         }
     }
