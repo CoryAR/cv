@@ -5,7 +5,7 @@ for (let i in button) {
     if (this.innerText.indexOf('C') !== -1) {
           document.querySelector('#results').innerText = '';
         } else if (this.innerText.indexOf('<') !== -1) {
-          document.querySelector('#results').charAt(0).innerText = '';
+          document.querySelector('#results').innerText = document.querySelector('#results').innerText.slice(0, -1);
         } else if (this.innerText.indexOf('=') === -1) {
           document.querySelector('#results').innerText += button[i].innerText;
         }
@@ -13,6 +13,5 @@ for (let i in button) {
 }
 
 document.querySelector('#equals').onclick = function() {
-  var equals = parseInt(document.querySelector('#results').innerText, 10);
   document.querySelector('#results').innerText = equals;
 };
