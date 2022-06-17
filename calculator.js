@@ -13,6 +13,15 @@ for (let i in button) {
 }
 
 document.querySelector('#equals').onclick = function() {
-  var equals = parseInt(document.querySelector('#results').innerText, 10);
+    let doMath = document.querySelectorAll('#results span.doMath').innerText;
+  
+  for (let i in span) {
+if (doMath[i] === '+') {
+  doMath[i] = '+';
+}
+  }
+  
+  let equals = parseInt(document.querySelector('#results').innerText, 10);
+  
   document.querySelector('#results').innerText = equals;
 }
