@@ -45,6 +45,7 @@ footer {
   border-radius: 5px;
   padding: 5px;
   background: #1363DF;
+  margin: 5px;
 }
 
 #calculator button:hover {
