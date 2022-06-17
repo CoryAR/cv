@@ -15,7 +15,7 @@ for (let i in button) {
 document.querySelector('#equals').onclick = function() {
     let doMath = document.querySelectorAll('#results span.doMath').innerText;
   
-  for (let i in span) {
+  for (let i in doMath) {
 if (doMath[i] === '+') {
   doMath[i] = '+';
 }
