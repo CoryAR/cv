@@ -16,12 +16,11 @@ document.querySelector('#equals').onclick = function() {
     let doMath = document.querySelectorAll('#results span.doMath').innerText;
   
   for (let i in doMath) {
-if (doMath[i] === '+') {
-  doMath[i] = '+';
+if (doMath[i] === '&#43;') {
+  doMath[i].replace(/&#43;/g, '+');
 }
   }
   
   let equals = parseInt(document.querySelector('#results').innerText, 10);
-  
   document.querySelector('#results').innerText = equals;
-}
+};
