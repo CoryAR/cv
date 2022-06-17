@@ -41,9 +41,14 @@ footer {
 
 #calculator button {
   column-count: 3;
-  border: 1px solid #000;
+  border: 1px solid #47B5FF;
   border-radius: 5px;
   padding: 5px;
+  background: #1363DF;
+}
+
+#calculator button:hover {
+  background: #47B5FF;
 }
 
 #results {
