@@ -6,7 +6,7 @@ for (let i in button) {
           document.querySelector('#results').innerText = '';
         } else if (this.innerText.indexOf('<') !== -1) {
           document.querySelector('#results').charAt(0).innerText = '';
-        } else {
+        } else if (this.innerText.indexOf('=') === -1) {
           document.querySelector('#results').innerText += button[i].innerText;
         }
   };
