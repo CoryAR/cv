@@ -11,3 +11,9 @@ for (let i in button) {
         }
   };
 }
+
+document.querySelector('#results').onclick = function() {
+  var equals = parseInt(document.querySelector('#results').innerText, 10);
+  document.querySelector('#results').innerText = equals;
+}
+
