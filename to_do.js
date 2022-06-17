@@ -5,8 +5,7 @@ add_to_do.onclick = function() {
 
     if (to_do_prompt === '') {
         alert('Please insert a to-do');
-    } else {
-    if (to_do_prompt) {
+    } else if (to_do_prompt) {
         let to_do_div = document.createElement('div');
         to_do_div.className = 'to-do-div';
         to_do_div.innerHTML = '<label><input type="checkbox" class="to-do" style="vertical-align: middle"> ' + to_do_prompt + '</label> (<a href="javascript: void(0)" class="remove-to-do">Remove Item</a>)';
