@@ -13,6 +13,6 @@ for (let i in button) {
 }
 
 document.querySelector('#equals').onclick = function() {
-  let equals = parseInt(document.querySelector('#results').innerText, 10);
+  var equals = parseInt(document.querySelector('#results').innerText, 10);
   document.querySelector('#results').innerText = equals;
 };
