@@ -8,7 +8,7 @@ for (let i in button) {
         } else if (this.innerText.indexOf('<') !== -1) {
           document.querySelector('#results').innerText = document.querySelector('#results').innerText.slice(0, -1);
         } else if (this.innerText.indexOf('=') === -1) {
-          if (button[i].className === 'add') {
+          if (button[i].className === 'add') {     
             total = parseInt(button[i].innerText + button[i].innerText, 10);
           } else if (button[i].className === 'subtract') {
             total = parseInt(button[i].innerText - button[i].innerText, 10);
@@ -17,8 +17,6 @@ for (let i in button) {
           } else if (button[i].className === 'divide') {
             total = parseInt(button[i].innerText / button[i].innerText, 10);
           }
-          
-          document.querySelector('#results').innerText = total;
         }
   };
 }
