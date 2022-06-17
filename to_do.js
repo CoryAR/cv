@@ -3,6 +3,9 @@ let add_to_do = document.querySelector('#add-to-do');
 add_to_do.onclick = function() {
     let to_do_prompt = prompt('Name of Your To-Do');
 
+    if (to_do_prompt === '') {
+        alert('Please insert a to-do');
+    } else {
     if (to_do_prompt) {
         let to_do_div = document.createElement('div');
         to_do_div.className = 'to-do-div';
