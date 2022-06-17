@@ -3,7 +3,7 @@ let add_to_do = document.querySelector('#add-to-do');
 add_to_do.onclick = function() {
     let to_do_prompt = prompt('Name of Your To-Do');
 
-    if (to_do_prompt !== null || undefined || '') {
+    if (to_do_prompt) {
         let to_do_div = document.createElement('div');
         to_do_div.className = 'to-do-div';
         to_do_div.innerHTML = '<label><input type="checkbox" class="to-do" style="vertical-align: middle"> ' + to_do_prompt + '</label> (<a href="javascript: void(0)" class="remove-to-do">Remove Item</a>)';
