@@ -40,16 +40,15 @@ footer {
 }
 
 #calculator button {
-  column-count: 3;
-  border: 1px solid #47B5FF;
   border-radius: 5px;
   padding: 5px;
-  background: #1363DF;
+  background: #47B5FF;
   margin: 5px;
+  color: #FFF;
 }
 
 #calculator button:hover {
-  background: #47B5FF;
+  background: #1363DF;
 }
 
 #results {
