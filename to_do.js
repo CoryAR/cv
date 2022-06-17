@@ -17,6 +17,14 @@ add_to_do.onclick = function() {
 
 if (localStorage.getItem('to-do-list') !== null) {
     document.querySelector('#to-do-list #contents').innerHTML = localStorage.getItem('to-do-list');
+    
+    let to_do_div = document.querySelectorAll('div.to-do-div');
+    
+    for (let i = 0; i < to_do_div.length; i++) {
+        if (to_do_div[i].innerText.trim() === '') {
+            to_do_div[i].remove();
+        }
+    }
 }
 
 let remove_to_do = document.querySelectorAll('a.remove-to-do');
