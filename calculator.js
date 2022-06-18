@@ -15,30 +15,32 @@ for (let i in button) {
         if (this.className === 'add') {
             document.querySelector('#results').innerText += '+';
         }
-        if (this.className === 'num') {
-            total = parseInt(num + document.querySelector('#results').innerText.substring(document.querySelector('#results').innerText.length, document.querySelector('#results').innerText.length - 1), 10);
-        }
         if (this.className === 'subtract') {
             document.querySelector('#results').innerText += '-';
-        }
-        if (this.className === 'num') {
-            total = parseInt(num - document.querySelector('#results').innerText.substring(document.querySelector('#results').innerText.length, document.querySelector('#results').innerText.length - 1), 10);
         }
         if (this.className === 'multiply') {
             document.querySelector('#results').innerText += '*';
         }
-        if (this.className === 'num') {
-            total = parseInt(num * document.querySelector('#results').innerText.substring(document.querySelector('#results').innerText.length, document.querySelector('#results').innerText.length - 1), 10);
-        }
         if (this.className === 'divide') {
             document.querySelector('#results').innerText += '/';
         }
-            if (this.className === 'num') {
-                total = parseInt(num / document.querySelector('#results').innerText.substring(document.querySelector('#results').innerText.length, document.querySelector('#results').innerText.length - 1), 10);
-            }
     };
 }
 
 document.querySelector('#equals').onclick = function() {
+            if (this.className === 'num') {
+            total = parseInt(num + document.querySelector('#results').innerText.substring(document.querySelector('#results').innerText.length, document.querySelector('#results').innerText.length - 1), 10);
+        }
+            if (this.className === 'num') {
+            total = parseInt(num - document.querySelector('#results').innerText.substring(document.querySelector('#results').innerText.length, document.querySelector('#results').innerText.length - 1), 10);
+        }
+            if (this.className === 'num') {
+            total = parseInt(num * document.querySelector('#results').innerText.substring(document.querySelector('#results').innerText.length, document.querySelector('#results').innerText.length - 1), 10);
+        }
+                if (this.className === 'num') {
+                total = parseInt(num / document.querySelector('#results').innerText.substring(document.querySelector('#results').innerText.length, document.querySelector('#results').innerText.length - 1), 10);
+            }            if (this.className === 'num') {
+                total = parseInt(num / document.querySelector('#results').innerText.substring(document.querySelector('#results').innerText.length, document.querySelector('#results').innerText.length - 1), 10);
+            }
     document.querySelector('#results').innerText = total;
 };
