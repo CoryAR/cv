@@ -1,6 +1,7 @@
 let slide = document.querySelectorAll('div.slide');
 
 for (let i in slide) {
+    if (slide[i].style.display === 'block') {
     document.querySelector('#next').onclick = function() {
       slide[i].nextSibling.style.display = 'block';
             slide[i].style.display = 'none';
@@ -10,4 +11,5 @@ for (let i in slide) {
       slide[i].previousSibling.style.display = 'block';
                 slide[i].style.display = 'none';
     };
+    }
 }
