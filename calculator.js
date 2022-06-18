@@ -13,16 +13,16 @@ for (let i in button) {
           document.querySelector('#results').innerText += num;
         } else if (this.className === 'add') {
             document.querySelector('#results').innerText += '+';
-            total = parseInt(num + num), 10);
+            total = parseInt(num + document.querySelector('#results').innerText.substring(document.querySelector('#results').innerText.length, document.querySelector('#results').innerText.length - 1), 10);
           } else if (this.className === 'subtract') {
             document.querySelector('#results').innerText += '-';
-            total = parseInt(num - document.querySelector('#results').innerText.substring(5, document.querySelector('#results').innerText.length - 1), 10);
+            total = parseInt(num - document.querySelector('#results').innerText.substring(document.querySelector('#results').innerText.length, document.querySelector('#results').innerText.length - 1), 10);
           } else if (this.className === 'multiply') {
             document.querySelector('#results').innerText += '*';
-            total = parseInt(num * document.querySelector('#results').innerText.substring(5, document.querySelector('#results').innerText.length - 1), 10);
+            total = parseInt(num * document.querySelector('#results').innerText.substring(document.querySelector('#results').innerText.length, document.querySelector('#results').innerText.length - 1), 10);
           } else if (this.className === 'divide') {
             document.querySelector('#results').innerText += '/';
-            total = parseInt(num / document.querySelector('#results').innerText.substring(5, document.querySelector('#results').innerText.length - 1), 10);
+            total = parseInt(num / document.querySelector('#results').innerText.substring(document.querySelector('#results').innerText.length, document.querySelector('#results').innerText.length - 1), 10);
           }
         };
     console.log(total);
