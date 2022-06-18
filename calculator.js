@@ -40,5 +40,5 @@ for (let i in button) {
 }
 
 document.querySelector('#equals').onclick = function() {
-    document.querySelector('#equals').innerText = total;
+    document.querySelector('#results').innerText = total;
 };
