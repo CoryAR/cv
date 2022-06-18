@@ -41,8 +41,9 @@ footer {
 
 #slideshow {
   width: 30%;
-  border-bottom: 2px solid #1363DF;
-  line-height: 150px;
+  border: 2px solid #1363DF;
+  line-height: 75px;
+  text-align: center;
 }
 
 div.slide {
@@ -51,10 +52,11 @@ div.slide {
 
 #slideshow div.slide:first-child::before {
   content: '<';
-  font-size: 100px;
+  font-size: 50px;
 }
 
 #slideshow div.slide:first-child::after {
   content: '>';
-  font-size: 100px;
+  font-size: 50px;
+  float: right;
 }
