@@ -45,15 +45,15 @@ footer {
 }
 
 div.slide {
-  display: none;
+  visibility: hidden;
 }
 
 #slideshow div.slide:first-child::before {
   content: '<';
-  font-size: 200px;
+  font-size: 150px;
 }
 
 #slideshow div.slide:first-child::after {
   content: '>';
-  font-size: 200px;
+  font-size: 150px;
 }
