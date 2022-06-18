@@ -8,18 +8,18 @@ for (let i in button) {
         } else if (this.innerText.indexOf('<') !== -1) {
           document.querySelector('#results').innerText = document.querySelector('#results').innerText.slice(0, -1);
         } else if (this.className === 'num') {
-          let num = button[i].innerText;
+          let num = this.innerText;
           document.querySelector('#results').innerText += num;
-          if (button[i].className === 'add') {
+          if (this.className === 'add') {
             document.querySelector('#results').innerText += '+';
             total = parseInt(num + document.querySelector('#results').innerText.substring(5, document.querySelector('#results').innerText.length - 1), 10);
-          } else if (button[i].className === 'subtract') {
+          } else if (this.className === 'subtract') {
             document.querySelector('#results').innerText += '-';
             total = parseInt(num - document.querySelector('#results').innerText.substring(5, document.querySelector('#results').innerText.length - 1), 10);
-          } else if (button[i].className === 'multiply') {
+          } else if (this.className === 'multiply') {
             document.querySelector('#results').innerText += '*';
             total = parseInt(num * document.querySelector('#results').innerText.substring(5, document.querySelector('#results').innerText.length - 1), 10);
-          } else if (button[i].className === 'divide') {
+          } else if (this.className === 'divide') {
             document.querySelector('#results').innerText += '/';
             total = parseInt(num / document.querySelector('#results').innerText.substring(5, document.querySelector('#results').innerText.length - 1), 10);
           }
