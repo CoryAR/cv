@@ -39,27 +39,17 @@ footer {
   border-radius: 5px
 }
 
-#calculator button {
-  border-radius: 5px;
-  padding: 5px;
-  background: #47B5FF;
-  margin: 10px;
-  color: #FFF;
+#slidshow {
+  width: 30%;
+  border-bottom: 2px solid #1363DF;
 }
 
-#calculator button:hover {
-  background: #1363DF;
+#slideshow div.slide:first-child::before {
+  content: '<';
+  font-size: 200px;
 }
 
-#results {
-  background: #FFF;
-  padding: 5px;
-  border: 1px solid #000;
-  border-radius: 5px;
-  width: 108px;
-  height: 15px;
-}
-
-#equals {
-  width: 108px;
+#slideshow div.slide:first-child::after {
+  content: '>';
+  font-size: 200px;
 }
