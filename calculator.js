@@ -32,10 +32,13 @@ for (let i in button) {
         }
         if (this.className === 'divide') {
             document.querySelector('#results').innerText += '/';
+        }
             if (this.className === 'num') {
                 total = parseInt(num / document.querySelector('#results').innerText.substring(document.querySelector('#results').innerText.length, document.querySelector('#results').innerText.length - 1), 10);
             }
-        }
     };
-    console.log(total);
 }
+
+document.querySelector('#equals').onclick = function() {
+    document.querySelector('#equals').innerText = total;
+};
