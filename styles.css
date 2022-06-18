@@ -43,7 +43,7 @@ footer {
   width: 30%;
   padding: 10px;
   line-height: 75px;
-  justify-content: center;
+  justify-content: space-evenly;
   display: flex;
 }
 
