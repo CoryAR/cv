@@ -1,13 +1,15 @@
 let slide = document.querySelectorAll('div.slide');
 
-  if(slide.style.display === 'block') {
+for (let i in slide) {
+  if (slide[i].style.display === 'block') {
     document.querySelector('#next').onclick = function() {
-      slide.style.display = 'none';
-      slide.nextSibling.display = 'block';
+      slide[i].style.display = 'none';
+      slide[i].nextSibling.display = 'block';
     };
     
         document.querySelector('#previous').onclick = function() {
-      slide.style.display = 'none';
-      slide.previousSibling.display = 'block';
+      slide[i].style.display = 'none';
+      slide[i].previousSibling.display = 'block';
     };
   }
+}
