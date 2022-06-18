@@ -54,10 +54,12 @@ div.slide {
   content: '<';
   font-size: 50px;
   float: left;
+  cursor: pointer;
 }
 
 #slideshow div.slide:first-child::after {
   content: '>';
   font-size: 50px;
   float: right;
+  cursor: pointer;
 }
