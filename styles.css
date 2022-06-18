@@ -50,15 +50,13 @@ div.slide {
   visibility: hidden;
 }
 
-#slideshow div.slide:first-child::before {
-  content: '<';
+#previous {
   font-size: 50px;
   float: left;
   cursor: pointer;
 }
 
-#slideshow div.slide:first-child::after {
-  content: '>';
+#next {
   font-size: 50px;
   float: right;
   cursor: pointer;
