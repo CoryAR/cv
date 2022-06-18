@@ -10,7 +10,7 @@ for (let i in button) {
         } else if (this.className === 'num') {
           let num = this.innerText;
           document.querySelector('#results').innerText += num;
-          if (this.className === 'add') {
+        } else if (this.className === 'add') {
             document.querySelector('#results').innerText += '+';
             total = parseInt(num + document.querySelector('#results').innerText.substring(5, document.querySelector('#results').innerText.length - 1), 10);
           } else if (this.className === 'subtract') {
