@@ -2,7 +2,12 @@ let popOut = document.querySelectorAll('#pop-outs a');
 
 for (let i in popOut) {
   popOut[i].onclick = function() {
-    document.querySelectorAll('div.popouts').remove();
+    let removePopouts = document.querySelectorAll('div.popouts');
+    
+    for (let x in removePopouts) {
+      removePopouts[x].remove();
+    }
+    
     let pos = popOut[i].getBoundingClientRect();
     let div = document.createElement('div');
     div.className = 'popouts';
