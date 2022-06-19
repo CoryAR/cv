@@ -12,6 +12,7 @@ for (let i in popOut) {
     div.innerHTML = 'This is a pop-out.';
     div.style.top = pos.top;
     div.style.left = pos.left;
+    div.style.display = 'block';
     document.body.appendChild(div);
   };
 }
