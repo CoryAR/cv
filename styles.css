@@ -47,6 +47,7 @@ div.popouts {
   position: absolute;
   border-radius: 5px;
   margin-top: 5px;
-  max-height: 0;
-  transition: max-height 0.15s ease-out;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform 0.26s ease;
 }
