@@ -45,4 +45,5 @@ div.popouts {
   padding: 5px;
   background: #47B5FF;
   position: absolute;
+  border-radius: 5px;
 }
