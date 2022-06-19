@@ -10,8 +10,8 @@ for (let i in popOut) {
     let div = document.createElement('div');
     div.className = 'popouts';
     div.innerHTML = 'This is a pop-out.';
-    div.style.top = pos.top;
-    div.style.left = pos.left;
+    div.style.top = pos.top + 'px';
+    div.style.left = pos.left + 'px';
     div.style.display = 'block';
     document.body.appendChild(div);
   };
