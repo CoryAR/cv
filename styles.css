@@ -40,6 +40,7 @@ footer {
 }
 
 div.popouts {
+  display: none;
   border: 1px solid #1363DF;
   padding: 5px;
   background: #47B5FF;
