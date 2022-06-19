@@ -13,6 +13,7 @@ for (let i in popOut) {
     div.style.top = pos.top + popOut[i].offsetHeight + 'px';
     div.style.left = pos.left + 'px';
     div.style.display = 'block';
+    div.style.maxHeight = '100px';
     document.body.appendChild(div);
   };
 }
