@@ -9,7 +9,7 @@ for (let i in popOut) {
     let pos = popOut[i].getBoundingClientRect();
     let div = document.createElement('div');
     div.className = 'popouts';
-    div.innerHTML = 'This is a pop-out.';
+    div.innerHTML = 'This is a pop-out.<br><div id="close" style="text-align: right; font-style: italic">Close</div>';
     div.style.top = pos.top + popOut[i].offsetHeight + 'px';
     div.style.left = pos.left + 'px';
     div.style.display = 'block';
@@ -18,3 +18,7 @@ for (let i in popOut) {
     document.body.appendChild(div);
   };
 }
+
+  document.querySelector('#close').forEach(function(a){
+  a.parentNode.remove()
+  });
