@@ -15,7 +15,6 @@ for (let i in popOut) {
     div.style.display = 'block';
     div.style.transform = 'scaleY(1)';
     document.body.appendChild(div);
+    document.querySelector('#close').parentNode.remove();
   };
 }
-
-document.querySelector('#close').parentNode.remove();
