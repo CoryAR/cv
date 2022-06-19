@@ -5,7 +5,7 @@ for (let i in popOut) {
     let removePopouts = document.querySelectorAll('div.popouts');
     
     for (let x in removePopouts) {
-      removePopouts[x].remove();
+      removePopouts[x].parentNode.removeChild(removePopouts[x]);
     }
     
     let pos = popOut[i].getBoundingClientRect();
