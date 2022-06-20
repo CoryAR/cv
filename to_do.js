@@ -1,8 +1,7 @@
 let add_to_do = document.querySelector('#add-to-do');
-let remove_to_do = document.querySelectorAll('a.remove-to-do');
-let to_do = document.querySelectorAll('label');
 
 function removeItem() {
+    let remove_to_do = document.querySelectorAll('a.remove-to-do');
     for (let i = 0; i < remove_to_do.length; i++) {
         remove_to_do[i].onclick = function() {
             this.parentNode.style.display = 'none';
@@ -46,6 +45,8 @@ if (localStorage.getItem('to-do-list') !== null) {
 }
 
 removeItem();
+
+let to_do = document.querySelectorAll('label');
 
 for (let i = 0; i < to_do.length; i++) {
     to_do[i].onclick = function() {
