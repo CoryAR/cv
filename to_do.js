@@ -10,8 +10,6 @@ function removeItem() {
 
         if (localStorage.getItem('remove-to-do-' + remove_to_do[i].previousElementSibling.innerText.trim()) !== null && localStorage.getItem('remove-to-do-' + remove_to_do[i].previousElementSibling.innerText.trim()) === 'true') {
             remove_to_do[i].parentNode.style.display = 'none';
-        } else if (localStorage.getItem('remove-to-do-' + remove_to_do[i].previousElementSibling.innerText.trim()) !== 'true') {
-            remove_to_do[0].parentNode.style.display = 'block';
         }
     }
 }
