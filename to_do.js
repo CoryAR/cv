@@ -28,8 +28,8 @@ add_to_do.onclick = function() {
         document.querySelector('#to-do-list #contents').appendChild(to_do_div);
         localStorage.setItem('to-do-list', document.querySelector('#to-do-list #contents').innerHTML);
         localStorage.removeItem('remove-to-do-' + to_do_prompt);
+        removeItem();
     }
-removeItem();
 };
 
 if (localStorage.getItem('to-do-list') !== null) {
