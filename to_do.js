@@ -2,6 +2,21 @@ let add_to_do = document.querySelector('#add-to-do');
 let remove_to_do = document.querySelectorAll('a.remove-to-do');
 let to_do = document.querySelectorAll('label');
 
+function removeItem() {
+    for (let i = 0; i < remove_to_do.length; i++) {
+        remove_to_do[i].onclick = function() {
+            this.parentNode.style.display = 'none';
+            localStorage.setItem('remove-to-do-' + this.previousElementSibling.innerText.trim(), true);
+        };
+
+        if (localStorage.getItem('remove-to-do-' + remove_to_do[i].previousElementSibling.innerText.trim()) !== null && localStorage.getItem('remove-to-do-' + remove_to_do[i].previousElementSibling.innerText.trim()) === 'true') {
+            remove_to_do[i].parentNode.style.display = 'none';
+        } else {
+            remove_to_do[0].parentNode.style.display = 'block';
+        }
+    }
+}
+
 add_to_do.onclick = function() {
     let to_do_prompt = prompt('Name of Your To-Do');
 
@@ -15,20 +30,10 @@ add_to_do.onclick = function() {
         localStorage.setItem('to-do-list', document.querySelector('#to-do-list #contents').innerHTML);
         localStorage.removeItem('remove-to-do-' + to_do_prompt);
     }
-
-    for (let i = 0; i < remove_to_do.length; i++) {
-        remove_to_do[i].onclick = function() {
-            this.parentNode.style.display = 'none';
-            localStorage.setItem('remove-to-do-' + this.previousElementSibling.innerText.trim(), true);
-        };
-
-        if (localStorage.getItem('remove-to-do-' + remove_to_do[i].previousElementSibling.innerText.trim()) !== null && localStorage.getItem('remove-to-do-' + remove_to_do[i].previousElementSibling.innerText.trim()) === 'true') {
-            remove_to_do[i].parentNode.style.display = 'none';
-        } else {
-            remove_to_do[0].parentNode.style.display = 'block';
-        }
-    }
+removeItem();
 };
+
+removeItem();
 
 if (localStorage.getItem('to-do-list') !== null) {
     document.querySelector('#to-do-list #contents').innerHTML = localStorage.getItem('to-do-list');
