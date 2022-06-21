@@ -9,15 +9,23 @@
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
-    <header>
-      <h1>Cory Roberts Work</h1>
-    </header>
+    <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Cory Roberts Portfolio</a>
+      <div class="navbar-header navbar-right">
+        <a href="index.html"><button type="button" class="btn btn-default navbar-btn">Home</button></a>
+        <a href="resume.html"><button type="button" class="btn btn-default navbar-btn">Resume</button></a>
+        <a href="my-work.html" class="active"><button type="button" class="btn btn-default navbar-btn">My Work</button></a>
+      </div>
+    </div>
+  </nav>
     <main>
 <p>
   As I have primarily done work on message boards, I am going to link you to some of the JavaScript/jQuery codes I've created and some of the skins I have coded.
 </p>
-<p>
-  <h2>JavaScript/jQuery Work</h2>
+    <div class="panel panel-primary">
+      <div class="panel-heading">JavaScript/jQuery Work</div>
+      <div class="panel-body">
   <ul>
     <li><a href="https://files.jcink.net/uploads/cory/Feedback_System.js" target="_blank">Feedback_System.js</a></li>
     <li><a href="https://files.jcink.net/uploads/cory/Multi_Quote.js" target="_blank">Multi_Quote.js</a></li>
@@ -25,7 +33,11 @@
     <li><a href="https://files.jcink.net/uploads/cory/Flexible_Form_Script.js" target="_blank">Flexible_Form_Script.js</a></li>
     <li><a href="https://files.jcink.net/uploads/cory/Recent_Updates.js" target="_blank">Recent_Updates.js</a></li>
   </ul>
-  <h2>Skins I Coded</h2>
+      </div>
+    </div>
+          <div class="panel panel-primary">
+      <div class="panel-heading">Skins I Coded</div>
+      <div class="panel-body">
   <ul>
     <li><a href="https://cory.jcink.net/?skinid=44" target="_blank">GothEsque</a></li>
     <li><a href="https://cory.jcink.net/index.php?skinid=35" target="_blank">Halo Wars</a></li>
@@ -33,6 +45,11 @@
     <li><a href="https://cory.jcink.net/index.php?skinid=5" target="_blank">Misty Woods</a></li>
     <li><a href="https://cory.jcink.net/index.php?skinid=37" target="_blank">Resource World</a></li>
   </ul>
+      </div>
+    </div>
+                <div class="panel panel-primary">
+      <div class="panel-heading">Custom Work</div>
+      <div class="panel-body">
   <h2>Vanilla JavaScript To-Do List</h2>
       <div id="to-do-list" style="border: 1px solid #1363DF; padding: 10px; width: 25%">
         <div style="text-align: right"><a href="javascript: void(0)" id="add-to-do" style="margin: 0 auto">Add a To-Do</a></div>
@@ -46,8 +63,9 @@
         <input type="button" name="stop" value="Stop Timer">
         <input type="button" name="restart" value="Restart Timer">
         <span id="results"></span>
-      </div> 
-</p>
+      </div>
+      </div>
+    </div>
     </main>
     <footer>
       &raquo; <a href="index.html">Back Home</a> <br>
