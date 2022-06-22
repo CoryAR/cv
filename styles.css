@@ -32,6 +32,22 @@ footer {
   padding-bottom: 10px;
 }
 
+#custom-work div.panel-body {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  text-align: center
+}
+
+#to-do-list {
+  border: 1px solid #1363DF;
+  padding: 10px
+}
+
+#to-do-list div:nth-child(1) {
+  text-align: right;
+}
+
 div.popouts {
   display: none;
   border: 1px solid #1363DF;
@@ -42,9 +58,6 @@ div.popouts {
   margin-top: 5px;
 }
 
-#custom-work div.panel-body {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  text-align: center
+#add-to-do {
+  margin: 0 auto;
 }
