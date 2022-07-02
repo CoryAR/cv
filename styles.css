@@ -73,7 +73,7 @@ div.popouts {
 }
 
 #calculator input {
-  width: calc(100% / 4 - 15);
+  width: calc(100% / 4 - 15px);
   border-radius: 10px;
   margin: 3px;
 }
