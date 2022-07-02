@@ -39,6 +39,10 @@ footer {
   text-align: center
 }
 
+#custom-work div.panel-body > div {
+  width: 33%;
+}
+
 #to-do-list {
   border: 1px solid #1363DF;
   padding: 10px
