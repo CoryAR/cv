@@ -9,6 +9,5 @@ calc[i].addEventListener('click', function () {
   } else if (this.value === '=') {
       document.querySelector('input[name="results"]').value = eval(document.querySelector('input[name="results"]').value);
   }
-  }
 });
 }
