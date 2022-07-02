@@ -1,4 +1,4 @@
-let calc = document.querySelectorAll('#calculator input:not([value="="])');
+let calc = document.querySelectorAll('#calculator input.btn:not([value="="])');
 
 for (let i in calc) {
 calc[i].addEventListener('click', function () {
