@@ -7,7 +7,7 @@ calc[i].addEventListener('click', function () {
   } else if (this.value === 'C') {
     document.querySelector('input[name="results"]').value = '';
   } else if (this.value === '=') {
-      document.querySelector('input[name="results"]').value = eval(document.querySelector('input[name="results"]').value);
+      document.querySelector('input[name="results"]').value = parseInt(document.querySelector('input[name="results"]').value, 10);
   }
 });
 }
