@@ -35,8 +35,9 @@ footer {
 #custom-work div.panel-body {
   display: flex;
   flex-wrap: wrap;
+  gap: 10px 0;
   justify-content: space-between;
-  text-align: center
+  text-align: center;
 }
 
 #custom-work div.panel-body > div {
