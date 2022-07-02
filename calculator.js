@@ -21,13 +21,13 @@ function results() {
   for (let i in numbers) {
     for (let j in operation) {
       if (operation[j] === '+') {
-        numbers[i] += numbers[i + 1];
+        document.querySelector('input[name="results"]').value = numbers[i] += numbers[i + 1];
     } else if (operation[j] === '-') {
-      numbers[i] -= numbers[i + 1];
+      document.querySelector('input[name="results"]').value = numbers[i] -= numbers[i + 1];
     } else if (operation[j] === '*') {
-      numbers[i] *= numbers[i + 1];
+      document.querySelector('input[name="results"]').value = numbers[i] *= numbers[i + 1];
     } else if (operation[j] === '/') {
-      numbers[i] /= numbers[i + 1];
+      document.querySelector('input[name="results"]').value = numbers[i] /= numbers[i + 1];
     }
   }
 }
