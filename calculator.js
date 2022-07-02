@@ -11,18 +11,20 @@ calc[i].addEventListener('click', function () {
   } else if (this.value === '=') {
       numbers.push(document.querySelector('input[name="results"]').value.match(/[0-9]+/g));
   operation.push(document.querySelector('input[name="results"]').value.match(/\+|-|\*|\//g));
-  
+  let value;
+    
   for (let i in numbers) {
     for (let j in operation) {
       if (operation[j] === '+') {
-        document.querySelector('input[name="results"]').value = numbers[i] += numbers[i + 1];
+        value = numbers[i] += numbers[i + 1];
     } else if (operation[j] === '-') {
-      document.querySelector('input[name="results"]').value = numbers[i] -= numbers[i + 1];
+      value = numbers[i] -= numbers[i + 1];
     } else if (operation[j] === '*') {
-      document.querySelector('input[name="results"]').value = numbers[i] *= numbers[i + 1];
+      value = numbers[i] *= numbers[i + 1];
     } else if (operation[j] === '/') {
-      document.querySelector('input[name="results"]').value = numbers[i] /= numbers[i + 1];
+      value = numbers[i] /= numbers[i + 1];
     }
+    document.querySelector('input[name="results"]').value = value;
   }
 }
   }
