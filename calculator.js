@@ -16,7 +16,7 @@ calc[i].addEventListener('click', function () {
   for (let i in numbers) {
     for (let j in operation) {
       if (operation[j] === '+') {
-        value = numbers[i] += numbers[i + 1];
+        console.log(numbers[i] += numbers[i + 1]);
     } else if (operation[j] === '-') {
       value = numbers[i] -= numbers[i + 1];
     } else if (operation[j] === '*') {
