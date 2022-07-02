@@ -9,7 +9,7 @@ calc[i].addEventListener('click', function () {
     document.querySelector('input[name="results"]').value = '';
   } else if (this.value === '=') {
       calculations.push(document.querySelector('input[name="results"]').value.match(/[0-9]+|\+|-|\*|\//g));
-  let value = 0;
+  let value;
     
   for (let i in calculations) {
       if (calculations[i] === '+') {
