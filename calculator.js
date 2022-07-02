@@ -1,9 +1,9 @@
 let calc = document.querySelectorAll('#calculator input.btn');
 
 let results = {
-  firstNumber: firstNumber,
-  secondNumber: secondNumber,
-  operator: operator
+  firstNumber: 0,
+  secondNumber: 0,
+  operator: '+'
 };
 
 for (let i in calc) {
