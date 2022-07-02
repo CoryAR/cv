@@ -16,13 +16,13 @@ calc[i].addEventListener('click', function () {
     results.secondNumber = parseInt(document.querySelector('input[name="results"]').value.split(/\+|-|\*|\//i)[1], 10);
     
     if (document.querySelector('input[name="results"]').value.includes('+')) {
-    console.log(results.firstNumber + results.secondNumber);
+    document.querySelector('input[name="results"]').value = results.firstNumber + results.secondNumber;
   } else if (document.querySelector('input[name="results"]').value.includes('-')) {
-    console.log(results.firstNumber - results.secondNumber);
+    document.querySelector('input[name="results"]').value = results.firstNumber - results.secondNumber;
   } else if (document.querySelector('input[name="results"]').value.includes('*')) {
-    console.log(results.firstNumber * results.secondNumber);
+    document.querySelector('input[name="results"]').value = results.firstNumber * results.secondNumber;
   } else if (document.querySelector('input[name="results"]').value.includes('/')) {
-    console.log(results.firstNumber / results.secondNumber);
+    document.querySelector('input[name="results"]').value = results.firstNumber / results.secondNumber;
   }
   }
 });
