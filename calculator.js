@@ -12,13 +12,13 @@ calc[i].addEventListener('click', function () {
     
   for (let i in calculations) {
       if (calculations[i] === '+') {
-      document.querySelector('input[name="results"]').value = parseInt(calculations[i - 1] += calculations[i + 1], 10);
+      document.querySelector('input[name="results"]').value = parseInt(calculations[i - 1] + calculations[i + 1], 10);
     } else if (calculations[i] === '-') {
-      document.querySelector('input[name="results"]').value = parseInt(calculations[i - 1] -= calculations[i + 1], 10);
+      document.querySelector('input[name="results"]').value = parseInt(calculations[i - 1] - calculations[i + 1], 10);
     } else if (calculations[i - 1] === '*') {
-      document.querySelector('input[name="results"]').value = parseInt(calculations[i - 1] *= calculations[i + 1], 10);
+      document.querySelector('input[name="results"]').value = parseInt(calculations[i - 1] * calculations[i + 1], 10);
     } else if (calculations[i] === '/') {
-      document.querySelector('input[name="results"]').value = parseInt(calculations[i - 1] /= calculations[i + 1], 10);
+      document.querySelector('input[name="results"]').value = parseInt(calculations[i - 1] / calculations[i + 1], 10);
     }
   }
   }
