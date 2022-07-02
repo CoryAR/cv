@@ -1,6 +1,5 @@
 let calc = document.querySelectorAll('#calculator input.btn');
-let numbers = [];
-let operation = [];
+let calculations = [];
 
 for (let i in calc) {
 calc[i].addEventListener('click', function () {
@@ -9,25 +8,21 @@ calc[i].addEventListener('click', function () {
   } else if (this.value === 'C') {
     document.querySelector('input[name="results"]').value = '';
   } else if (this.value === '=') {
-      numbers.push(document.querySelector('input[name="results"]').value.match(/[0-9]+/g));
-  operation.push(document.querySelector('input[name="results"]').value.match(/\+|-|\*|\//g));
-  let value;
+      calculations.push(document.querySelector('input[name="results"]').value.match(/[0-9]+|\+|-|\*|\//g));
+  let value = 0;
     
-  for (let i in numbers) {
-    for (let j in operation) {
-      if (operation[j] === '+') {
-        console.log(numbers[i]);
-        console.log(numbers[i + 1]);
-    } else if (operation[j] === '-') {
-      value = numbers[i] -= numbers[i + 1];
-    } else if (operation[j] === '*') {
-      value = numbers[i] *= numbers[i + 1];
-    } else if (operation[j] === '/') {
-      value = numbers[i] /= numbers[i + 1];
+  for (let i in calculations) {
+      if (calculations[i] === '+') {
+      value = calculations[i - 1] += calculations[i + 1];
+    } else if (calculations[i] === '-') {
+      value = calculations[i - 1] -= calculations[i + 1];
+    } else if (calculations[i - 1] === '*') {
+      value = calculations[i - 1] *= calculations[i + 1];
+    } else if (calculations[i] === '/') {
+      value = calculations[i - 1] /= calculations[i + 1];
     }
     document.querySelector('input[name="results"]').value = value;
   }
-}
   }
 });
 }
