@@ -9,13 +9,7 @@ calc[i].addEventListener('click', function () {
   } else if (this.value === 'C') {
     document.querySelector('input[name="results"]').value = '';
   } else if (this.value === '=') {
-    results();
-  }
-});
-}
-
-function results() {
-  numbers.push(document.querySelector('input[name="results"]').value.match(/[0-9]+/g));
+      numbers.push(document.querySelector('input[name="results"]').value.match(/[0-9]+/g));
   operation.push(document.querySelector('input[name="results"]').value.match(/\+|-|\*|\//g));
   
   for (let i in numbers) {
@@ -31,4 +25,6 @@ function results() {
     }
   }
 }
+  }
+});
 }
