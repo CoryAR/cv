@@ -10,21 +10,24 @@ calc[i].addEventListener('click', function () {
     document.querySelector('input[name="results"]').value = '';
   } else if (this.value === '=') {
     results();
-    console.log(numbers);
-    console.log(operation);
   }
 });
 }
 
 function results() {
-  let numb = document.querySelector('input[name="results"]').value.match(/[0-9]+/g);
-  let oper = document.querySelector('input[name="results"]').value.match(/\+|-|\*|\//g);
-      
-  for (let i in numb) {
-    numbers.push(numb.charAt(i));
-  }
+  numbers.push(document.querySelector('input[name="results"]').value.match(/[0-9]+/g));
+  operation.push(document.querySelector('input[name="results"]').value.match(/\+|-|\*|\//g));
   
-  for (let i in oper) {
-    operation.push(oper.charAt(i));
+  for (let i in numbers) {
+    for (let j in operation) {
+      if (operation[j] === '+') {
+        numbers[i] += numbers[i + 1];
+    } else if (operation[j] === '-') {
+      numbers[i] -= numbers[i + 1];
+    } else if (operation[j] === '*') {
+      numbers[i] *= numbers[i + 1];
+    } else if (operation[j] === '/') {
+      numbers[i] /= numbers[i + 1];
+    }
   }
 }
