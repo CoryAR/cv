@@ -69,6 +69,7 @@ div.popouts {
   border: 1px solid #e7e7e7;
   padding: 5px;
   width: 50%;
+  margin: 0 auto;
 }
 
 #calculator input {
