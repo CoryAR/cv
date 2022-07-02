@@ -14,13 +14,15 @@ calc[i].addEventListener('click', function () {
   for (let i in calculations) {
       if (calculations[i] === '+') {
       value = parseInt(calculations[i - 1] += calculations[i + 1], 10);
-        document.querySelector('input[name="results"]').value = value;
     } else if (calculations[i] === '-') {
       value = parseInt(calculations[i - 1] -= calculations[i + 1], 10);
     } else if (calculations[i - 1] === '*') {
       value = parseInt(calculations[i - 1] *= calculations[i + 1], 10);
     } else if (calculations[i] === '/') {
       value = parseInt(calculations[i - 1] /= calculations[i + 1], 10);
+    }
+    if (i === calculations.length - 1) {
+    document.querySelector('input[name="results"]').value = value;
     }
   }
   }
