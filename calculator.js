@@ -13,7 +13,8 @@ calc[i].addEventListener('click', function () {
     
   for (let i in calculations) {
       if (calculations[i].indexOf('+') !== -1) {
-      document.querySelector('input[name="results"]').value = parseInt(calculations[(i+len-1)%len] calculations[i] calculations[(i+1)%len], 10);
+      console.log(calculations[(i+len-1)%len])
+        console.log(calculations[(i+1)%len]));
     } else if (calculations[i].indexOf('-') !== -1) {
       document.querySelector('input[name="results"]').value = parseInt(calculations[i - 1] - calculations[i + 1], 10);
     } else if (calculations[i].indexOf('*') !== -1) {
