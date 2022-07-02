@@ -15,7 +15,7 @@ calc[i].addEventListener('click', function () {
   } else if (this.value === '=') {
     results.operator = document.querySelector('input[name="results"]').value.match(/\+|-|\*|\//i);
     results.firstNumber = document.querySelector('input[name="results"]').value.match(/[0-9]+/i)[0];
-    results.secondNumber = document.querySelector('input[name="results"]').value.match(/[0-9]+/i)[1];
+    results.secondNumber = document.querySelector('input[name="results"]').value.match(/[0-9]+/i)[0];
     console.log(results);
   }
 });
