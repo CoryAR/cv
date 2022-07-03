@@ -16,7 +16,7 @@ calc[i].addEventListener('click', function () {
     results.secondNumber = parseInt(document.querySelector('input[name="results"]').value.split(/\+|-|\*|\//i)[1], 10);
     
     if (document.querySelector('input[name="results"]').value.length === 3) {
-      document.querySelectorAll('#calculator input.equals').click();
+      document.querySelector('#calculator input.equals')[0].click();
     }
     
     if (document.querySelector('input[name="results"]').value.includes('+')) {
