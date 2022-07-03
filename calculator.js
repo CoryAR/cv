@@ -10,7 +10,7 @@ calc[i].addEventListener('click', function () {
   if (this.value !== '=' && this.value !== 'C') {
   document.querySelector('input[name="results"]').value += this.value;
     
-    if (document.querySelector('input[name="results"]').value.length === 3) {
+    if (document.querySelector('input[name="results"]').value.length === 3 && document.querySelector('input[name="results"]').value.match(/\+|-|\*|\//i)) {
       document.querySelector('#calculator input.equals').click();
     }
   } else if (this.value === 'C') {
