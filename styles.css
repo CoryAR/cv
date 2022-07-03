@@ -93,3 +93,7 @@ div.popouts {
   color: #FFF;
   text-align: right;
 }
+
+input.equals {
+  display: none;
+}
