@@ -11,7 +11,7 @@ for (let i in calc) {
         if (this.value !== '=' && this.value !== 'C') {
             results.value += this.value;
 
-            if (results.value.length === 3 && results.value.match(/\+|-|\*|\//i)) {
+            if (results.value.length === 3 && results.value.match(/\+|-|\*|\//i).length) {
                 document.querySelector('#calculator input.equals').click();
             }
         } else if (this.value === 'C') {
