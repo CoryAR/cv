@@ -11,7 +11,7 @@ for (let i in calc) {
         if (this.value !== '=' && this.value !== 'C') {
             results.value += this.value;
 
-            if (results.value.match(/[0-9]+|[0-9]+\.[0-9]+/g).length >= 2 && results.value.match(/\+|-|\*|\//i).length === 1) {
+            if (results.value.match(/[0-9]+/g).length >= 2 && results.value.match(/\+|-|\*|\//i).length === 1) {
                 document.querySelector('#calculator input.equals').click();
             }
         } else if (this.value === 'C') {
@@ -28,6 +28,8 @@ for (let i in calc) {
                 results.value = numbers.firstNumber * numbers.secondNumber;
             } else if (results.value.includes('/')) {
                 results.value = numbers.firstNumber / numbers.secondNumber;
+            } else if (isNaN(results.value)) {
+                alert('Test');
             }
         }
     });
