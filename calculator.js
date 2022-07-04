@@ -17,8 +17,8 @@ for (let i in calc) {
         } else if (this.value === 'C') {
             results.value = '';
         } else if (this.value === '=') {
-            numbers.firstNumber = parseInt(results.value.match(/[0-9]+/i)[0], 10);
-            numbers.secondNumber = parseInt(results.value.split(/\+|-|\*|\//i)[1], 10);
+            numbers.firstNumber = parseFloat(results.value.match(/[0-9]+/i)[0], 10);
+            numbers.secondNumber = parseFloat(results.value.split(/\+|-|\*|\//i)[1], 10);
 
             if (results.value.includes('+')) {
                 results.value = numbers.firstNumber + numbers.secondNumber;
