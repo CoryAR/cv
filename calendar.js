@@ -59,19 +59,15 @@ addEvent.addEventListener('click', function () {
         for (let x = 0; x < localStorage.length; x++) {
             if (localStorage.key(x).indexOf('event') !== -1) {
                 array.push(localStorage.key(x));
-            }
-        }
-  console.log(array);
-  
-              for (let y in array) {
-                let eKeyDate = array[y].split('~')[0];
-                let eKeyText = array[y].split('~')[1];
+                let eKeyDate = localStorage.getItem(localStorage.key(i)).split('~')[0];
+                let eKeyText = localStorage.getItem(localStorage.key(i)).split('~')[1];
                 
               if (calSpan[i].innerText === eKeyDate) {
                 let eventDot = document.createElement('span');
                 eventDot.className = 'event-dot';
                 eventDot.title = eKeyText;
                 calSpan[i].appendChild(eventDot);
-              }
+                            }
         }
+              }
 }
