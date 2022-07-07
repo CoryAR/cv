@@ -64,7 +64,7 @@ addEvent.addEventListener('click', function () {
               console.log(calSpan[i].innerText);
               console.log(eKeyDate);
               
-              if (calSpan[i].innerText === eKeyDate) {
+              if (calSpan[i].innerText.indexOf(eKeyDate) !== -1) {
                 let eventDot = document.createElement('span');
                 eventDot.className = 'event-dot';
                 eventDot.title = eKeyText;
