@@ -18,8 +18,9 @@ for (let i = 0; i < dates.length; i++) {
 let calSpan = document.querySelectorAll('#calendar span');
 
 for (let i in calSpan) {
-  if (calSpan[i].innerText === currentDate) {
-    calSpan[i].classList.remove('btn-primary').add('btn-default');
+  if (parseInt(calSpan[i].innerText, 10) === currentDate) {
+    calSpan[i].classList.remove('btn-primary');
+    calSpan[i].classList.add('btn-default');
   }
   
 calSpan[i].addEventListener('click', function () {
