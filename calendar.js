@@ -22,9 +22,13 @@ calSpan[i].addEventListener('click', function () {
     document.querySelector('#add-event').remove();
   }
   
-  var textarea = document.createElement('textarea');
+  let textarea = document.createElement('textarea');
   textarea.placeholder = 'Add an event for ' + month + '/' + calSpan[i].innerText;
   textarea.id = 'add-event';
+  var input = document.createElement('input');
+  input.type = 'button';
+  input.className = 'btn';
+  input.value = 'Add Event';
   document.querySelector('#calendar').appendChild(textarea);
 });
 }
