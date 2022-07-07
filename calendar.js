@@ -29,6 +29,7 @@ calSpan[i].addEventListener('click', function () {
   input.type = 'button';
   input.className = 'btn';
   input.value = 'Add Event';
-  document.querySelector('#calendar').appendChild(textarea + input);
+  document.querySelector('#calendar').appendChild(textarea);
+  document.querySelector('#calendar').appendChild(input);
 });
 }
