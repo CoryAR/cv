@@ -24,7 +24,7 @@ for (let i in calc) {
                 results.value = numbers.firstNumber + numbers.secondNumber;
             } else if (results.value.includes('-')) {
                 results.value = numbers.firstNumber - numbers.secondNumber;
-            } else if (results.value.includes('*')) {
+            } else if (results.value.includes('X')) {
                 results.value = numbers.firstNumber * numbers.secondNumber;
             } else if (results.value.includes('/')) {
                 results.value = numbers.firstNumber / numbers.secondNumber;
