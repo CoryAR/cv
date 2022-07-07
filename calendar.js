@@ -51,13 +51,13 @@ for (let i in calSpan) {
         let clickedEvent = calSpan[i].innerText;
 
         addEvent.addEventListener('click', function() {
-            localStorage.setItem('event' + calSpan[i].innerText, calSpan[i].innerText + '~' + addEventText.value);
             let eventDot = document.createElement('span');
             eventDot.className = 'event-dot';
             eventDot.title = addEventText.value;
 
             if (calSpan[i].innerText === clickedEvent && calSpan[i].innerHTML.indexOf('event-dot') === -1 && addEventText.value !== '') {
                 calSpan[i].appendChild(eventDot);
+                localStorage.setItem('event' + calSpan[i].innerText, calSpan[i].innerText + '~' + addEventText.value);
             }
         });
 
