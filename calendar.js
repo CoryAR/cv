@@ -46,6 +46,6 @@ addEvent.addEventListener('click', function () {
   var eventDot = document.createElement('span');
   eventDot.className = 'event-dot';
   calSpan[i].appendChild(eventDot);
-}
+});
 });
 }
