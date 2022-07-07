@@ -17,7 +17,7 @@ let calSpan = document.querySelectorAll('#calendar span');
 
 for (let i in calSpan) {
 calSpan[i].addEventListener('click', function () {
-  if (document.querySelector('#add-event').length) {
+  if (document.querySelector('#add-event').length === 1) {
     document.querySelector('#add-event').remove();
   }
   
