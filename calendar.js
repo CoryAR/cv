@@ -10,7 +10,7 @@ for (let i = 0; i < dates.length; i++) {
   let span = document.createElement('span');
   span.className = 'btn btn-primary';
   span.style.margin = '3px';
-  span.innerText = dates[i];
+  span.innerText = dates[i] + 1;
   document.querySelector('#calendar').appendChild(span);
 }
 
