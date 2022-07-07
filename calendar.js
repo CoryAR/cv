@@ -3,9 +3,8 @@ function daysInMonth(month, year) {
 }
 
 let monthDays = daysInMonth(new Date().getMonth(), new Date().getFullYear());
-let startDate = 0;
+let dates = Array.from(Array(monthDays).keys());
 
-for (let i = 0; i < monthDays; i++) {
-  console.log(monthDays[i]);
-  document.querySelector('#calendar').append(startDate + monthDays[i]);
+for (let i = 0; i < dates.length; i++) {
+  document.querySelector('#calendar').append(dates[i]);
 }
