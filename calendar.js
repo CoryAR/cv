@@ -61,6 +61,8 @@ addEvent.addEventListener('click', function () {
                 array.push(localStorage.key(x));
             }
         }
+  console.log(array);
+  
               for (let y in array) {
                 let eKeyDate = array[y].split('~')[0];
                 let eKeyText = array[y].split('~')[1];
