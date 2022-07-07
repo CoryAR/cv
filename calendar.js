@@ -46,10 +46,21 @@ addEvent.addEventListener('click', function () {
   localStorage.setItem('event' + calSpan[i].innerText, addEventText.value);
   var eventDot = document.createElement('span');
   eventDot.className = 'event-dot';
+  eventDot.title = addEventText.value;
   
   if (calSpan[i].innerText === clickedEvent && calSpan[i].innerHTML.indexOf('event-dot') === -1) {
     calSpan[i].appendChild(eventDot);
   }
 });
 });
+ 
+  var array = [];
+  
+        for (var i = 0; i < localStorage.length; i++) {
+            if (localStorage.key(i).indexOf('event') !== -1) {
+                array.push(localStorage.key(i));
+               console.log(localStorage.getItem(localStorage.key(i).split('event')[0]));
+               console.log(localStorage.getItem(localStorage.key(i)));
+            }
+        }
 }
