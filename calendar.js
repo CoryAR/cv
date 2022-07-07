@@ -43,7 +43,7 @@ calSpan[i].addEventListener('click', function () {
   let clickedEvent = calSpan[i].innerText;
       
 addEvent.addEventListener('click', function () {
-  localStorage.setItem('event' + calSpan[i].innerText, addEventText.value);
+  localStorage.setItem('event' + calSpan[i].innerText, calSpan[i].innerText + '~' + addEventText.value);
   var eventDot = document.createElement('span');
   eventDot.className = 'event-dot';
   eventDot.title = addEventText.value;
@@ -59,8 +59,8 @@ addEvent.addEventListener('click', function () {
         for (var x = 0; x < localStorage.length; x++) {
             if (localStorage.key(x).indexOf('event') !== -1) {
                 array.push(localStorage.key(x));
-               console.log(localStorage.getItem(localStorage.key(x).split('event')[0]));
-               console.log(localStorage.getItem(localStorage.key(x)));
+               console.log(localStorage.getItem(localStorage.key(x).split('~')[0]));
+               console.log(localStorage.getItem(localStorage.key(x).split('~')[1]));
             }
         }
 }
