@@ -1,9 +1,9 @@
 function daysInMonth(month, year) {
-  return new Date(year, month, 1).getDate();
+  return new Date(year, month, 0).getDate();
 }
 
 let monthDays = daysInMonth(new Date().getMonth() + 1, new Date().getFullYear());
-let dates = Array.from(Array(monthDays).keys());
+let dates = Array.from(Array(monthDays + 1).keys());
 let month = new Date().getMonth() + 1;
 
 for (let i = 0; i < dates.length; i++) {
