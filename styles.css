@@ -97,3 +97,8 @@ div.popouts {
 input.equals {
   display: none;
 }
+
+#calendar {
+  text-align: left;
+  width: 95%;
+}
