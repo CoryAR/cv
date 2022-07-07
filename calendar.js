@@ -17,7 +17,10 @@ let calSpan = document.querySelectorAll('#calendar span');
 
 for (let i in calSpan) {
 calSpan[i].addEventListener('click', function () {
-  document.querySelector('#add-event').remove();
+  if (document.querySelector('#add-event').length) {
+    document.querySelector('#add-event').remove();
+  }
+  
   var textarea = document.createElement('textarea');
   textarea.style.margin = '10px';
   textarea.id = 'add-event';
