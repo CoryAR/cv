@@ -63,7 +63,7 @@ addEvent.addEventListener('click', function () {
   
   removeEvent.addEventListener('click', function () {
     if (calSpan[i].innerText === clickedEvent) {
-      calSpan[i].removeChild(eventDot);
+      calSpan[i].innerHTML = clickedEvent;
     }
   });
 });
