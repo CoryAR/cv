@@ -108,3 +108,10 @@ input.equals {
   width: 100%;
   height: 5em;
 }
+
+span.event-dot {
+  background: red;
+  border-radius: 10px;
+  width: 10px;
+  height: 10px;
+}
