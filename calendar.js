@@ -52,11 +52,9 @@ calSpan[i].addEventListener('click', function () {
       
 addEvent.addEventListener('click', function () {
   localStorage.setItem('event' + calSpan[i].innerText, calSpan[i].innerText + '~' + addEventText.value);
-  eventDot.title = addEventText.value;
   let eventDot = document.createElement('span');
   eventDot.className = 'event-dot';
   eventDot.title = addEventText.value;
-  addEventText.value = '';
   
   if (calSpan[i].innerText === clickedEvent && calSpan[i].innerHTML.indexOf('event-dot') === -1) {
     calSpan[i].appendChild(eventDot);
