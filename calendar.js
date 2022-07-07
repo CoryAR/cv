@@ -64,6 +64,7 @@ addEvent.addEventListener('click', function () {
   removeEvent.addEventListener('click', function () {
     if (calSpan[i].innerText === clickedEvent) {
       calSpan[i].innerHTML = clickedEvent;
+      localStorage.removeItem('event' + clickedEvent);
     }
   });
 });
