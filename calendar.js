@@ -62,6 +62,7 @@ addEvent.addEventListener('click', function () {
                 let eKeyDate = localStorage.getItem(localStorage.key(i)).split('~')[0];
                 let eKeyText = localStorage.getItem(localStorage.key(i)).split('~')[1];
                 console.log(eKeyDate + eKeyText);
+              console.log(calSpan[i].innerText === eKeyDate);
               
               if (calSpan[i].innerText === eKeyDate) {
                 let eventDot = document.createElement('span');
