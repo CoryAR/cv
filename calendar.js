@@ -46,7 +46,10 @@ addEvent.addEventListener('click', function () {
   localStorage.setItem('event' + calSpan[i].innerText, addEventText.value);
   var eventDot = document.createElement('span');
   eventDot.className = 'event-dot';
-  calSpan[i].innerHTML = eventDot + clickedEvent;
+  
+  if (calSpan[i].innerText === clickedEvent) {
+    calSpan[i].innerHTML = eventDot + clickedEvent;
+  }
 });
 });
 }
