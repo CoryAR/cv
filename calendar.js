@@ -47,7 +47,7 @@ addEvent.addEventListener('click', function () {
   var eventDot = document.createElement('span');
   eventDot.className = 'event-dot';
   
-  if (calSpan[i].innerText === clickedEvent) {
+  if (calSpan[i].innerText === clickedEvent && calSpan[i].innerHTML.indexOf('event-dot') === -1) {
     calSpan[i].appendChild(eventDot);
   }
 });
