@@ -5,6 +5,7 @@ function daysInMonth(month, year) {
 let monthDays = daysInMonth(new Date().getMonth() + 1, new Date().getFullYear());
 let dates = Array.from(Array(monthDays).keys());
 let month = new Date().getMonth() + 1;
+let currentDate = new Date().getDate();
 
 for (let i = 0; i < dates.length; i++) {
   let span = document.createElement('span');
@@ -21,6 +22,10 @@ calSpan[i].addEventListener('click', function () {
   if (document.querySelector('#add-event') !== null) {
     document.querySelector('#add-event').remove();
     document.querySelector('input[value="Add Event"]').remove();
+  }
+  
+  if (calSpan[i].innerText === currentDate) {
+    calSpan[i].classList.remove('btn-primary').add('btn-default');
   }
   
   let textarea = document.createElement('textarea');
