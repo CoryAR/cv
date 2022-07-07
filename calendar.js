@@ -6,5 +6,5 @@ let monthDays = daysInMonth(new Date().getMonth(), new Date().getFullYear())
 let startDate = 0;
 
 for (let i in monthDays) {
-documentQuerySelector('#calendar').appendChild(startDate[i]++);
+documentQuerySelector('#calendar').append(startDate[i]++);
 }
