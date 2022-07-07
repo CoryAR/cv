@@ -13,8 +13,8 @@ for (let i = 0; i < dates.length; i++) {
   span.innerText = dates[i];
   document.querySelector('#calendar').appendChild(span);
   
-  if (span[i].innerText === '0') {
-    document.querySelector('#calendar').firstChild.remove();
+  if (span[i].innerText !== '0') {
+    span[i].remove();
   }
 }
 
