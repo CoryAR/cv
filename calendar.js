@@ -6,5 +6,6 @@ let monthDays = [];
 
 for (let i = 0; i < monthDays; i++) {
   monthDays[i].push(daysInMonth(new Date().getMonth(), new Date().getFullYear()));
+  console.log(monthDays[i]);
   document.querySelector('#calendar').append(monthDays[i]);
 }
