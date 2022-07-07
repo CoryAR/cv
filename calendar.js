@@ -44,7 +44,7 @@ calSpan[i].addEventListener('click', function () {
       
 addEvent.addEventListener('click', function () {
   localStorage.setItem('event' + calSpan[i].innerText, calSpan[i].innerText + '~' + addEventText.value);
-  var eventDot = document.createElement('span');
+  let eventDot = document.createElement('span');
   eventDot.className = 'event-dot';
   eventDot.title = addEventText.value;
   
@@ -56,11 +56,18 @@ addEvent.addEventListener('click', function () {
  
   var array = [];
   
-        for (var x = 0; x < localStorage.length; x++) {
+        for (let x = 0; x < localStorage.length; x++) {
             if (localStorage.key(x).indexOf('event') !== -1) {
                 array.push(localStorage.key(x));
-               console.log(localStorage.getItem(localStorage.key(x).split('~')[0]));
-               console.log(localStorage.getItem(localStorage.key(x).split('~')[1]));
+              let eKeyDate = localStorage.getItem(localStorage.key(x).split('~')[0]);
+              let eKeyText = localStorage.getItem(localStorage.key(x).split('~')[1]);
+              
+              if (calSpan[i].innerText === eKeyDate) {
+                let eventDot = document.createElement('span');
+                eventDot.className = 'event-dot';
+                eventDot.title = eKeyText;
+                calSpan[i].appendChild(eventDot);
+              }
             }
         }
 }
