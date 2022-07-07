@@ -3,7 +3,7 @@ function daysInMonth(month, year) {
 }
 
 let monthDays = daysInMonth(new Date().getMonth() + 1, new Date().getFullYear());
-let dates = Array.from(Array(monthDays + 1).keys());
+let dates = Array.from(Array(monthDays).keys());
 let month = new Date().getMonth() + 1;
 
 for (let i = 0; i < dates.length; i++) {
@@ -12,6 +12,10 @@ for (let i = 0; i < dates.length; i++) {
   span.style.margin = '3px';
   span.innerText = dates[i];
   document.querySelector('#calendar').appendChild(span);
+  
+  if (span[i].innerText === '0') {
+    span[i].remove();
+  }
 }
 
 let calSpan = document.querySelectorAll('#calendar span');
