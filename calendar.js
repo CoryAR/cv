@@ -27,6 +27,7 @@ calSpan[i].addEventListener('click', function () {
   if (document.querySelector('#add-event') !== null) {
     document.querySelector('#add-event').remove();
     document.querySelector('input[value="Add Event"]').remove();
+        document.querySelector('input[value="Remove Event"]').remove();
   }
   
   let textarea = document.createElement('textarea');
@@ -36,10 +37,16 @@ calSpan[i].addEventListener('click', function () {
   input.type = 'button';
   input.className = 'btn';
   input.value = 'Add Event';
+    var input2 = document.createElement('input');
+  input2.type = 'button';
+  input2.className = 'btn';
+  input2.value = 'Remove Event';
   document.querySelector('#calendar').appendChild(textarea);
-  document.querySelector('#calendar').appendChild(input);  
+  document.querySelector('#calendar').appendChild(input); 
+  document.querySelector('#calendar').appendChild(input2);  
   let addEventText = document.querySelector('#add-event');
   let addEvent = document.querySelector('input[value="Add Event"]');
+  let removeEvent = document.querySelector('input[value="Remove Event"]');
   let clickedEvent = calSpan[i].innerText;
       
 addEvent.addEventListener('click', function () {
@@ -52,6 +59,12 @@ addEvent.addEventListener('click', function () {
     calSpan[i].appendChild(eventDot);
   }
 });
+  
+  removeEvent.addEventListener('click', function () {
+    if (calSpan[i].innerText === clickedEvent) {
+      calSpan[i].children.remove();
+    }
+  });
 });
  
   var array = [];
