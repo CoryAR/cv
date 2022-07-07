@@ -37,6 +37,15 @@ calSpan[i].addEventListener('click', function () {
   input.className = 'btn';
   input.value = 'Add Event';
   document.querySelector('#calendar').appendChild(textarea);
-  document.querySelector('#calendar').appendChild(input);
+  document.querySelector('#calendar').appendChild(input);  
+  let addEventText = document.querySelector('#add-event');
+  let addEvent = document.querySelector('input[name="Add Event"]');
+
+addEvent.addEventListener('click', function () {
+  localStorage.setItem('event' + calSpan[i].innerText, addEventText.value);
+  var eventDot = document.createElement('span');
+  eventDot.className = 'event-dot';
+  calSpan[i].appendChild(eventDot);
+}
 });
 }
