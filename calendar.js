@@ -40,6 +40,7 @@ calSpan[i].addEventListener('click', function () {
     var input2 = document.createElement('input');
   input2.type = 'button';
   input2.className = 'btn';
+  input2.style.marginLeft = '5px';
   input2.value = 'Remove Event';
   document.querySelector('#calendar').appendChild(textarea);
   document.querySelector('#calendar').appendChild(input); 
