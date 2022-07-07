@@ -56,7 +56,7 @@ for (let i in calSpan) {
             eventDot.className = 'event-dot';
             eventDot.title = addEventText.value;
 
-            if (calSpan[i].innerText === clickedEvent && calSpan[i].innerHTML.indexOf('event-dot') === -1) {
+            if (calSpan[i].innerText === clickedEvent && calSpan[i].innerHTML.indexOf('event-dot') === -1 && addEventText.value !== '') {
                 calSpan[i].appendChild(eventDot);
             }
         });
