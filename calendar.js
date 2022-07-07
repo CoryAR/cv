@@ -59,12 +59,12 @@ addEvent.addEventListener('click', function () {
         for (let x = 0; x < localStorage.length; x++) {
             if (localStorage.key(x).indexOf('event') !== -1) {
                 array.push(localStorage.key(x));
-                let eKeyDate = localStorage.getItem(localStorage.key(i)).split('~')[0];
-                let eKeyText = localStorage.getItem(localStorage.key(i)).split('~')[1];
+                let eKeyDate = localStorage.getItem(localStorage.key(x)).split('~')[0];
+                let eKeyText = localStorage.getItem(localStorage.key(x)).split('~')[1];
               console.log(calSpan[i].innerText);
               console.log(eKeyDate);
               
-              if (calSpan[i].innerText.indexOf(eKeyDate) !== -1) {
+              if (calSpan[i].innerText === eKeyDate) {
                 let eventDot = document.createElement('span');
                 eventDot.className = 'event-dot';
                 eventDot.title = eKeyText;
