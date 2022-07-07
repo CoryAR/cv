@@ -56,11 +56,11 @@ addEvent.addEventListener('click', function () {
  
   var array = [];
   
-        for (var i = 0; i < localStorage.length; i++) {
-            if (localStorage.key(i).indexOf('event') !== -1) {
-                array.push(localStorage.key(i));
-               console.log(localStorage.getItem(localStorage.key(i).split('event')[0]));
-               console.log(localStorage.getItem(localStorage.key(i)));
+        for (var x = 0; x < localStorage.length; x++) {
+            if (localStorage.key(x).indexOf('event') !== -1) {
+                array.push(localStorage.key(x));
+               console.log(localStorage.getItem(localStorage.key(x).split('event')[0]));
+               console.log(localStorage.getItem(localStorage.key(x)));
             }
         }
 }
