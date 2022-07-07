@@ -2,10 +2,9 @@ function daysInMonth(month, year) {
   return new Date(year, month, 0).getDate();
 }
 
-let monthDays = [];
+let monthDays = daysInMonth(new Date().getMonth(), new Date().getFullYear());
+let startDate = 0;
 
 for (let i = 0; i < monthDays; i++) {
-  monthDays[i].push(daysInMonth(new Date().getMonth(), new Date().getFullYear()));
-  console.log(monthDays[i]);
-  document.querySelector('#calendar').append(monthDays[i]);
+  document.querySelector('#calendar').append(startDate + monthDays[i]);
 }
