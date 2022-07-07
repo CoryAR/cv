@@ -6,6 +6,6 @@ console.log(daysInMonth(new Date().getMonth(), new Date().getFullYear()));
 let monthDays = daysInMonth(new Date().getMonth(), new Date().getFullYear());
 let startDate = 0;
 
-for (let i in monthDays) {
+for (let i of monthDays) {
 document.querySelector('#calendar').append(startDate[i]++);
 }
