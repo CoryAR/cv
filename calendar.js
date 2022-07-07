@@ -4,6 +4,7 @@ function daysInMonth(month, year) {
 
 let monthDays = daysInMonth(new Date().getMonth() + 1, new Date().getFullYear());
 let dates = Array.from(Array(monthDays).keys());
+let month = new Date().getMonth() + 1;
 
 for (let i = 0; i < dates.length; i++) {
   let span = document.createElement('span');
@@ -22,7 +23,7 @@ calSpan[i].addEventListener('click', function () {
   }
   
   var textarea = document.createElement('textarea');
-  textarea.style.margin = '10px';
+  textarea.placeholder = 'Add an event for ' + month + ', ' + calSpan[i].innerText;
   textarea.id = 'add-event';
   document.querySelector('#calendar').appendChild(textarea);
 });
