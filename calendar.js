@@ -23,7 +23,7 @@ calSpan[i].addEventListener('click', function () {
   }
   
   var textarea = document.createElement('textarea');
-  textarea.placeholder = 'Add an event for ' + month + ', ' + calSpan[i].innerText;
+  textarea.placeholder = 'Add an event for ' + month + '/' + calSpan[i].innerText;
   textarea.id = 'add-event';
   document.querySelector('#calendar').appendChild(textarea);
 });
