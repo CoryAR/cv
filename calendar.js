@@ -40,12 +40,13 @@ calSpan[i].addEventListener('click', function () {
   document.querySelector('#calendar').appendChild(input);  
   let addEventText = document.querySelector('#add-event');
   let addEvent = document.querySelector('input[value="Add Event"]');
-
+  let clickedEvent = calSpan[i].innerText,
+      
 addEvent.addEventListener('click', function () {
   localStorage.setItem('event' + calSpan[i].innerText, addEventText.value);
   var eventDot = document.createElement('span');
   eventDot.className = 'event-dot';
-  calSpan[i].appendChild(eventDot);
+  calSpan[i].innerHTML = eventDot + clickedEvent;
 });
 });
 }
