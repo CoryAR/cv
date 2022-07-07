@@ -18,14 +18,14 @@ for (let i = 0; i < dates.length; i++) {
 let calSpan = document.querySelectorAll('#calendar span');
 
 for (let i in calSpan) {
+  if (calSpan[i].innerText === currentDate) {
+    calSpan[i].classList.remove('btn-primary').add('btn-default');
+  }
+  
 calSpan[i].addEventListener('click', function () {
   if (document.querySelector('#add-event') !== null) {
     document.querySelector('#add-event').remove();
     document.querySelector('input[value="Add Event"]').remove();
-  }
-  
-  if (calSpan[i].innerText === currentDate) {
-    calSpan[i].classList.remove('btn-primary').add('btn-default');
   }
   
   let textarea = document.createElement('textarea');
