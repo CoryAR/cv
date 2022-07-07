@@ -48,7 +48,7 @@ addEvent.addEventListener('click', function () {
   eventDot.className = 'event-dot';
   
   if (calSpan[i].innerText === clickedEvent) {
-    calSpan[i].innerHTML = eventDot + clickedEvent;
+    calSpan[i].appendChild(eventDot);
   }
 });
 });
