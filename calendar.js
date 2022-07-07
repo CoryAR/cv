@@ -8,7 +8,7 @@ let dates = Array.from(Array(monthDays).keys());
 for (let i = 0; i < dates.length; i++) {
   let span = document.createElement('span');
   span.className = 'btn btn-primary';
-  span.margin = '3px';
+  span.style.margin = '3px';
   span.innerText = dates[i];
   document.querySelector('#calendar').appendChild(span);
 }
