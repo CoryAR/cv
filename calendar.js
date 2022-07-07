@@ -12,9 +12,9 @@ for (let i = 0; i < dates.length; i++) {
   span.style.margin = '3px';
   span.innerText = dates[i];
   document.querySelector('#calendar').appendChild(span);
-  document.querySelector('#calendar').firstChild.remove();
 }
 
+document.querySelector('#calendar').firstChild.remove();
 let calSpan = document.querySelectorAll('#calendar span');
 
 for (let i in calSpan) {
