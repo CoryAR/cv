@@ -39,7 +39,7 @@ calSpan[i].addEventListener('click', function () {
   document.querySelector('#calendar').appendChild(textarea);
   document.querySelector('#calendar').appendChild(input);  
   let addEventText = document.querySelector('#add-event');
-  let addEvent = document.querySelector('input[name="Add Event"]');
+  let addEvent = document.querySelector('input[value="Add Event"]');
 
 addEvent.addEventListener('click', function () {
   localStorage.setItem('event' + calSpan[i].innerText, addEventText.value);
