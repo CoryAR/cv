@@ -102,3 +102,9 @@ input.equals {
   text-align: left;
   width: 95%;
 }
+
+#add-event {
+  margin: 10px auto;
+  width: 100%;
+  height: 5em;
+}
